@@ -1,0 +1,5 @@
+#set EDITOR = "Editor"
+
+    private void Cut() {
+	?@EDITOR?.cut();
+    }

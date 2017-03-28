@@ -1,0 +1,24 @@
+#output "output"
+
+#set choose = 4
+#select choose
+	#option "big"
+		#adapt: "a"
+			#insert-before break_a
+		inserting before the break point
+			#endinsert
+			#insert break_a
+		inserting inside the break point
+			#endinsert
+			#insert-after break_a
+		inserting after the break point
+			#endinsert
+		#endadapt
+	#endoption
+	#option 1
+		#adapt "b"
+	#endoption
+	#otherwise
+		the variable should be either big or small now is ?@choose?
+	#endotherwise
+#endselect

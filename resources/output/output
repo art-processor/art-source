@@ -1,0 +1,13 @@
+#set variable = "b","c","d"
+
+#output "a"
+	Writing in output a
+
+#while variable
+	#output ?@variable?
+	Writing in output ?@variable?
+#endwhile
+
+#output "a"
+	Writing in output a again
+	

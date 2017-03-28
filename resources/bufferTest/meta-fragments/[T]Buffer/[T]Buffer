@@ -1,0 +1,22 @@
+#output "resources/bufferTest/outFiles/"?@elmtType?"Buffer.java"
+package ?@java_nio_packageName?;
+
+public abstract class ?@elmtType?Buffer extends Buffer
+    implements Comparable
+	#break implements
+{
+
+#adapt "resources/bufferTest/meta-fragments/[T]Buffer/commonAttributes"
+#break moreAttributes
+
+#adapt "resources/bufferTest/meta-fragments/[T]Buffer/commonConstructors"
+#break moreConstructors
+
+#adapt "resources/bufferTest/meta-fragments/[T]Buffer/commonMethods"
+#break moreMethods
+
+#break: toString
+  #adapt "resources/bufferTest/meta-fragments/[T]Buffer/toString"
+#endbreak
+
+}

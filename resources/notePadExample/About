@@ -1,0 +1,11 @@
+#break ABOUT_NEWPARAMETERS
+
+	private void About() {
+
+#break: ABOUT_MESSAGE
+	JOptionPane.showMessageDialog(this, \"About Message\", 
+	\"About\", JOptionPane.PLAIN_MESSAGE);
+#endbreak
+
+	return;
+	}

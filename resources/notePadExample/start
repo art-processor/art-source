@@ -1,0 +1,42 @@
+#output "resources/notePadExample/Notepad.java"
+
+#set NOTEPAD = "Notepad"
+#set TITLE = "A Notepad"
+#set BGCOLOR = "lightGray"
+#set LookAndFeel = "Motif"
+
+#set Menubar = "File","Edit","Help"
+#set ItemsFile = "New","Open","Save","-","Exit"
+#set ItemsEdit = "Cut","Copy","Paste"
+#set ItemsHelp = "About"
+#set ToolbarBtns = "New","Open","Save","-","Cut","Copy","Paste"
+
+#set GifNew = "resources/new.gif"
+#set GifOpen = "resources/open.gif"
+#set GifSave = "resources/save.gif"
+#set GifCut = "resources/cut.gif"
+#set GifCopy = "resources/copy.gif"
+#set GifPaste = "resources/paste.gif"
+
+#set TipNew = "Create a new file"
+#set TipOpen = "Open a file"
+#set TipSave = "Save to a file"
+#set TipCut = "Move selection to clipboard"
+#set TipCopy = "Copy selection to clipboard"
+#set TipPaste = "Paste clipboard to selection"
+
+#set ActionNew = "NewFile"
+#set ActionOpen = "OpenFile"
+#set ActionSave = "SaveFile"
+#set ActionExit = "Exit"
+#set ActionCut = "Cut"
+#set ActionCopy = "Copy"
+#set ActionPaste = "Paste"
+#set ActionAbout = "About"
+
+#adapt: "notePad"
+#insert ABOUT_MESSAGE
+	JOptionPane.showMessageDialog(this, \"This is an example of a Notepad\n Developed in XVCL and Java\", 
+	\"About\", JOptionPane.INFORMATION_MESSAGE);
+#endinsert
+#endadapt

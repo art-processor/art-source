@@ -1,0 +1,8 @@
+#set X = 6/3
+value for A is evaluated at the time of the use = ?@A?
+#set X = 3-7
+value for A is evaluated at the time of the use = ?@A?
+#set X = 2+(3/(6-5))*4
+value for A is evaluated at the time of the use = ?@A?
+#set X = ?@@B?
+value for A is evaluated at the time of the use = ?@A?

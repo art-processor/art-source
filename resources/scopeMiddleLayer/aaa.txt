@@ -1,0 +1,14 @@
+BEGINNING OF FILE: ?$currentfile?: ?@a? ?@c?
+#set a = 30
+#set b = 10000
+#set c = 2,2,2
+
+#adapt: "bbb.txt"
+	#set b = 100
+#endadapt
+
+#adapt: "bbb.txt"
+	#set b = 10000000000
+#endadapt
+
+END OF FILE: ?$currentfile?: ?@a? ?@b? ?@c?

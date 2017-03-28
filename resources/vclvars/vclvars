@@ -1,0 +1,31 @@
+#output "output"
+#set variables = "first", "second", "third", "fourth", "fifth"
+
+debugmode is : ?$debugmode?
+Default output is: ?$defaultoutput?
+Current file is: ?$currentfile?
+Current output is ?$outfile?
+Changing output to ?$outdir?"\out2.txt"
+--
+#output ?$outdir?"\out2.txt"
+Current output dir is: ?$outdir?
+Current output is ?$outfile?
+back to output
+#output "output"
+Back at ?$outfile?
+
+Number of variables: ?$size(variables)?
+
+#while variables
+    #art.if $isfirst(variables)
+( ?@variables?,
+
+    #art.endif
+    #art.if ($islast(variables) == false && $isfirst(variables) == false)
+?@variables?,
+
+    #art.elif ($islast(variables))
+?@variables? )
+
+    #art.endif
+#endwhile

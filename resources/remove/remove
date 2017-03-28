@@ -1,0 +1,7 @@
+#output "output"
+#set A = "firstA"
+#set B = "firstB"
+?@A?
+?@B?
+#remove A
+#adapt "adapted"

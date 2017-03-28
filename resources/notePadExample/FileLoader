@@ -1,0 +1,51 @@
+#set Statusbar = "Statusbar"
+
+#break FILELOADER_NEWPARAMETERS
+
+	/**
+	 * Thread to load a file into the text storage model
+	 */
+	class FileLoader extends Thread {
+
+	FileLoader(File f, Document doc) {
+		setPriority(4);
+		this.f = f;
+		this.doc = doc;
+	}
+
+	public void run() {
+#break: FILELOADER_RUN
+	try {
+		// initialize the statusbar
+		?@STATUSBAR?.removeAll();
+		JProgressBar progress = new JProgressBar();
+		progress.setMinimum(0);
+		progress.setMaximum((int) f.length());
+		?@STATUSBAR?.add(progress);
+		?@STATUSBAR?.revalidate();
+
+		// try to start reading
+		Reader in = new FileReader(f);
+		char[] buff = new char[4096];
+		int nch;
+		while ((nch = in.read(buff, 0, buff.length)) != -1) {
+			doc.insertString(doc.getLength(), new String(buff, 0, nch), null);
+			progress.setValue(progress.getValue() + nch);
+		}
+
+		// we are done... get rid of progressbar
+		?@STATUSBAR?.removeAll();
+		?@STATUSBAR?.revalidate();
+	}
+	catch (IOException e) {
+		System.err.println(e.toString());
+	}
+	catch (BadLocationException e) {
+		System.err.println(e.getMessage());
+	}
+#endbreak
+	}
+
+	Document doc;
+	File f;
+	}

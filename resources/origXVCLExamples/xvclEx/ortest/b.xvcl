@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="b">
+	I am frame B copied by the root.
+	<adapt x-frame="c.xvcl"/>
+</x-frame>

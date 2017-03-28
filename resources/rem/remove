@@ -1,0 +1,12 @@
+#output "output"
+
+#set file = "b"
+#set me = "Soe"
+	My name is Mr.?@me?
+#adapt-samelevel: ?@file?
+#endadapt
+#remove me
+	//me become undefined
+		you are Mr.?@you?
+		Mr.?@you? don't exist here.
+	// as me become undefined, this adapt will introduce variable undefined error if not commented

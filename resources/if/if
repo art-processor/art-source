@@ -1,0 +1,11 @@
+#set J2SE = "yes"
+
+#art.ifdef J2SE
+	#output "J2SEGuide.java"
+	#adapt "SwingGUI"
+#art.endif
+
+#art.ifndef J2SE
+	#output "J2MEGuide.java"
+	#adapt "TUI"
+#art.endif

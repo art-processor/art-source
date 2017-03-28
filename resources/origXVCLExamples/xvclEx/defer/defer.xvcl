@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl_1_0.dtd">
+<x-frame name="defer" outdir="deferDir" outfile="variable" language="java">
+	<set var="dir" value="C:\xvclEx\defer"/>
+	
+	<set var="B" value="C"/>
+	<set var="C" value="3"/>
+	<set var="A" value="?@X?" defer-evaluation="yes"/>
+	<!-- variable A is defered-->
+	<adapt x-frame="?@dir?\a.xvcl"/>
+
+</x-frame>

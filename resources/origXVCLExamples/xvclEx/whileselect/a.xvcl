@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="a" language="java">
+	<while using-items-in="loop">
+		<select option="loop">
+			<option value="1">
+				<break name="?@loop?">
+
+				       replace this text
+
+				</break>
+			</option>
+			<option value="2">
+				<break name="?@loop?">
+
+				       replace this text
+
+				</break>
+			</option>
+			<option value="3">
+				<break name="?@loop?">
+
+				       replace this text
+
+				</break>
+			</option>
+		</select>
+	</while>
+</x-frame>

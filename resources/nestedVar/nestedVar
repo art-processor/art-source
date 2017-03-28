@@ -1,0 +1,21 @@
+#output "output"
+
+
+#set BYBU = "G"
+#set BG = "H"	
+#set-defer R = "B"?@@A?"B"?@C?
+#set A = "X"
+#set X = "Y"
+#set Y = "Z"
+#set C = "U"
+#set BU = "V"
+#set AV = "W"
+#set AT = "S"
+#set V = "T"
+
+#set-defer E = ?@F?
+#set-defer F = ?@G?
+#set G = "L"
+	
+#adapt "a"
+	

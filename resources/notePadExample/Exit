@@ -1,0 +1,7 @@
+#break EXIT_NEWPARAMETERS
+
+	private void Exit() {
+	#break: EXIT	
+	System.exit(0);
+	#endbreak
+	}

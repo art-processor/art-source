@@ -1,0 +1,12 @@
+#output "output"
+
+#set file = "b"
+#set me = "Soe"
+#adapt-samelevel: ?@file?
+#endadapt
+
+	My name is Mr.?@me?
+	you are Mr.?@you?
+	Mr.?@you? don't exist here.
+
+#adapt "a"

@@ -1,0 +1,11 @@
+
+This x-frame adapt It copies x-frame a and b
+
+This is frame "a" copied by frame "adapt"
+
+This is frame "c" adapted by frame "a"
+
+
+This is x-frame "b" being copied by frame "adapt"
+
+I'm frame "d" being copied by frame "b"

@@ -1,0 +1,262 @@
+
+    byte _get(int i) {				// package-private
+	return hb[i];
+    }
+
+    void _put(int i, byte b) {			// package-private
+
+	hb[i] = b;
+
+    }
+
+    // char
+
+    public char getChar() {
+	return Bits.getChar(this, ix(nextGetIndex(2)), bigEndian);
+    }
+
+    public char getChar(int i) {
+	return Bits.getChar(this, ix(checkIndex(i, 2)), bigEndian);
+    }
+
+    public ByteBuffer putChar(char x) {
+
+	Bits.putChar(this, ix(nextPutIndex(2)), x, bigEndian);
+	return this;
+
+    }
+
+    public ByteBuffer putChar(int i, char x) {
+
+	Bits.putChar(this, ix(checkIndex(i, 2)), x, bigEndian);
+	return this;
+
+    }
+
+    public CharBuffer asCharBuffer() {
+	int size = this.remaining() >> 1;
+	int off = offset + position();
+	return (bigEndian
+		? (CharBuffer)(new ByteBufferAsCharBufferB(this,
+							       -1,
+							       0,
+							       size,
+							       size,
+							       off))
+		: (CharBuffer)(new ByteBufferAsCharBufferL(this,
+							       -1,
+							       0,
+							       size,
+							       size,
+							       off)));
+    }
+
+    // short
+
+    public short getShort() {
+	return Bits.getShort(this, ix(nextGetIndex(2)), bigEndian);
+    }
+
+    public short getShort(int i) {
+	return Bits.getShort(this, ix(checkIndex(i, 2)), bigEndian);
+    }
+
+    public ByteBuffer putShort(short x) {
+
+	Bits.putShort(this, ix(nextPutIndex(2)), x, bigEndian);
+	return this;
+
+    }
+
+    public ByteBuffer putShort(int i, short x) {
+
+	Bits.putShort(this, ix(checkIndex(i, 2)), x, bigEndian);
+	return this;
+
+    }
+
+    public ShortBuffer asShortBuffer() {
+	int size = this.remaining() >> 1;
+	int off = offset + position();
+	return (bigEndian
+		? (ShortBuffer)(new ByteBufferAsShortBufferB(this,
+								 -1,
+								 0,
+								 size,
+								 size,
+								 off))
+		: (ShortBuffer)(new ByteBufferAsShortBufferL(this,
+								 -1,
+								 0,
+								 size,
+								 size,
+								 off)));
+    }
+
+    // int
+
+    public int getInt() {
+	return Bits.getInt(this, ix(nextGetIndex(4)), bigEndian);
+    }
+
+    public int getInt(int i) {
+	return Bits.getInt(this, ix(checkIndex(i, 4)), bigEndian);
+    }
+
+    public ByteBuffer putInt(int x) {
+
+	Bits.putInt(this, ix(nextPutIndex(4)), x, bigEndian);
+	return this;
+
+    }
+
+    public ByteBuffer putInt(int i, int x) {
+
+	Bits.putInt(this, ix(checkIndex(i, 4)), x, bigEndian);
+	return this;
+
+    }
+
+    public IntBuffer asIntBuffer() {
+	int size = this.remaining() >> 2;
+	int off = offset + position();
+	return (bigEndian
+		? (IntBuffer)(new ByteBufferAsIntBufferB(this,
+							     -1,
+							     0,
+							     size,
+							     size,
+							     off))
+		: (IntBuffer)(new ByteBufferAsIntBufferL(this,
+							     -1,
+							     0,
+							     size,
+							     size,
+							     off)));
+    }
+
+    // long
+
+    public long getLong() {
+	return Bits.getLong(this, ix(nextGetIndex(8)), bigEndian);
+    }
+
+    public long getLong(int i) {
+	return Bits.getLong(this, ix(checkIndex(i, 8)), bigEndian);
+    }
+
+    public ByteBuffer putLong(long x) {
+
+	Bits.putLong(this, ix(nextPutIndex(8)), x, bigEndian);
+	return this;
+
+    }
+
+    public ByteBuffer putLong(int i, long x) {
+
+	Bits.putLong(this, ix(checkIndex(i, 8)), x, bigEndian);
+	return this;
+
+    }
+
+    public LongBuffer asLongBuffer() {
+	int size = this.remaining() >> 3;
+	int off = offset + position();
+	return (bigEndian
+		? (LongBuffer)(new ByteBufferAsLongBufferB(this,
+							       -1,
+							       0,
+							       size,
+							       size,
+							       off))
+		: (LongBuffer)(new ByteBufferAsLongBufferL(this,
+							       -1,
+							       0,
+							       size,
+							       size,
+							       off)));
+    }
+
+    // float
+
+    public float getFloat() {
+	return Bits.getFloat(this, ix(nextGetIndex(4)), bigEndian);
+    }
+
+    public float getFloat(int i) {
+	return Bits.getFloat(this, ix(checkIndex(i, 4)), bigEndian);
+    }
+
+    public ByteBuffer putFloat(float x) {
+
+	Bits.putFloat(this, ix(nextPutIndex(4)), x, bigEndian);
+	return this;
+
+    }
+
+    public ByteBuffer putFloat(int i, float x) {
+
+	Bits.putFloat(this, ix(checkIndex(i, 4)), x, bigEndian);
+	return this;
+
+    }
+
+    public FloatBuffer asFloatBuffer() {
+	int size = this.remaining() >> 2;
+	int off = offset + position();
+	return (bigEndian
+		? (FloatBuffer)(new ByteBufferAsFloatBufferB(this,
+								 -1,
+								 0,
+								 size,
+								 size,
+								 off))
+		: (FloatBuffer)(new ByteBufferAsFloatBufferL(this,
+								 -1,
+								 0,
+								 size,
+								 size,
+								 off)));
+    }
+
+    // double
+
+    public double getDouble() {
+	return Bits.getDouble(this, ix(nextGetIndex(8)), bigEndian);
+    }
+
+    public double getDouble(int i) {
+	return Bits.getDouble(this, ix(checkIndex(i, 8)), bigEndian);
+    }
+
+    public ByteBuffer putDouble(double x) {
+
+	Bits.putDouble(this, ix(nextPutIndex(8)), x, bigEndian);
+	return this;
+
+    }
+
+    public ByteBuffer putDouble(int i, double x) {
+
+	Bits.putDouble(this, ix(checkIndex(i, 8)), x, bigEndian);
+	return this;
+
+    }
+
+    public DoubleBuffer asDoubleBuffer() {
+	int size = this.remaining() >> 3;
+	int off = offset + position();
+	return (bigEndian
+		? (DoubleBuffer)(new ByteBufferAsDoubleBufferB(this,
+								   -1,
+								   0,
+								   size,
+								   size,
+								   off))
+		: (DoubleBuffer)(new ByteBufferAsDoubleBufferL(this,
+								   -1,
+								   0,
+								   size,
+								   size,
+								   off)));
+    }

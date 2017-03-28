@@ -1,0 +1,50 @@
+#set MENUBAR = "Menubar"
+
+#break MENUBAR_NEWPARAMETERS
+
+	private JMenuBar ?@MENUBAR? = createMenubar();
+
+	/**
+	 * Create a Java menubar
+	 */
+	protected JMenuBar createMenubar() {
+		JMenuBar mb = new JMenuBar();
+		JMenu m;
+		JMenuItem mi;
+	#while Menubar
+		m = new JMenu(\"?@Menubar?\");
+		#while "Items"?@Menubar?
+			#select "Items"?@Menubar?
+				#option "-"
+				m.addSeparator();
+				#endoption
+				#otherwise
+			mi = new JMenuItem(\"?@Items@Menubar?\");
+			mi.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				?@Action@Items@Menubar?();
+			}
+			});
+			m.add(mi);
+				#endotherwise
+			#endselect
+		#endwhile
+		mb.add(m);
+	#endwhile
+			
+	return mb;
+	}
+
+#break: MENUBAR_ACTIONS
+#while Menubar
+	#while "Items"?@Menubar?
+		#select "Items"?@Menubar?
+			#option "-"
+			#endoption
+			#otherwise
+			#adapt ?@Action@Items@Menubar?
+			#endotherwise
+		#endselect
+	#endwhile
+#endwhile
+#endbreak

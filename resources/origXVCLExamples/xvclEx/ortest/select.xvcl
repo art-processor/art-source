@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="select" outdir="selectDir" outfile="select" language="java">
+	<set var="choose" value="z"/>
+	<select option="choose">
+		<option value="big|small">
+			<adapt x-frame="a.xvcl">
+				<insert-before break="break_a">
+	 inserting before the break point
+      </insert-before>
+				<insert break="break_a">
+	 inserting inside the break point
+      </insert>
+				<insert-after break="break_a">
+	 inserting after break point
+      </insert-after>
+			</adapt>
+		</option>
+		<option value="small|big">
+			<adapt x-frame="b.xvcl"/>
+		</option>
+		<otherwise>
+			<message text="the variable should be either big or small now &apos;?@choose?&apos; "/>
+		</otherwise>
+	</select>
+</x-frame>

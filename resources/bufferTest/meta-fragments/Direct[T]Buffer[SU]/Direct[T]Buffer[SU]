@@ -1,0 +1,35 @@
+#output bufferTest/outFiles/Direct?@elmtType?Buffer?@ByteOrder?.java
+
+/*
+ * @\(#)Direct-X-Buffer.java	1.37 01/12/03
+ *
+ * Copyright 2002 Sun Microsystems, Inc. All rights reserved.
+ * SUN PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+ */
+
+// -- This file was mechanically generated: Do not edit! -- //
+
+package ?@java_nio_packageName?;
+
+import sun.misc.Unsafe;
+import sun.nio.ch.DirectBuffer;
+import sun.nio.ch.FileChannelImpl;
+
+class Direct?@elmtType?Buffer?@ByteOrder?
+
+    extends ?@elmtType?Buffer
+#break extends
+#endbreak
+	
+    implements DirectBuffer
+{
+
+#adapt bufferTest/meta-fragments/ByteBufferAs[T]Buffer[BL]/commonAttributes
+#adapt bufferTest/meta-fragments/ByteBufferAs[T]Buffer[BL]/commonConstructors
+#break moreConstructors
+#endbreak
+#adapt bufferTest/meta-fragments/ByteBufferAs[T]Buffer[BL]/commonMethods
+#break moreMethods
+#endbreak
+
+}

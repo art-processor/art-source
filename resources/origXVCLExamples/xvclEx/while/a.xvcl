@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="a" language="java">
+	<while using-items-in="loop">
+		<break name="?@loop?"/>
+	</while>
+</x-frame>

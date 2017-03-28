@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl_1_0.dtd">
+<x-frame name="adapt" outdir="adapt" outfile="adapt" language="java">
+
+	This x-frame adapt. It copies x-frame a and b.
+
+	<adapt x-frame="C:\xvclEx\adapt\a\a.xvcl"/>
+	<adapt x-frame="C:\xvclEx\adapt\b\b.xvcl"/>
+
+</x-frame>

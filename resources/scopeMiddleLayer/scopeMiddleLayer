@@ -1,0 +1,14 @@
+#output "output"
+#set a = 10
+#set c = 1,2,3
+#adapt: "aaa.txt"
+	#set a = 20
+	#set c = 1,1,1
+#endadapt
+
+?@c?
+#adapt: "aaa.txt"
+	#set a = 3000
+#endadapt
+
+END OF FILE ?$currentfile?: ?@a? ?@c?

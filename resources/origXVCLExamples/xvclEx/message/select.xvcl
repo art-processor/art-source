@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<!-- <x-frame name="select"> -->
+<x-frame name="select" outdir="selectDir" outfile="select" language="java">
+	<set var="blur" value="B"/>
+	<set var="test" value="VARIABLE"/>
+	<set var="dir" value="C:\xvclEx\message\"/>
+	<select option="blur">
+		<option value="Big">
+			<!-- <adapt x-frame="?@dir?a.xvcl"> -->
+			<adapt x-frame="a.xvcl">
+				<insert-before break="break_a">
+				This is before the break.
+				</insert-before>
+				<insert break="break_a">
+				This is a test of Mr.Big inside break.
+				</insert>
+				<insert-after break="break_a">
+				This is after the break.
+				</insert-after>
+			</adapt>
+		</option>
+		<option value="small">
+			<!-- <adapt x-frame="?@dir?b.xvcl"/> -->
+			<adapt x-frame="b.xvcl"/>
+		</option>
+		<otherwise>
+			<message continue="yes" text="?@test? This is a test for error.
+			Here  ?@test? can give multiple line messages ?@test?. The actual value is &quot;?@blur?&quot;."/>
+		</otherwise>
+	</select>
+</x-frame>

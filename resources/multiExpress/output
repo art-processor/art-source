@@ -1,0 +1,65 @@
+	Loop 1
+	
+		innerLoop1 1
+		
+			innerLoop2 1 : 1 : 1 
+			innerLoop2 2 : 1 : 1 
+			innerLoop2 3 : 1 : 1 
+		innerLoop1 2
+		
+			innerLoop2 1 : 2 : 1 
+			innerLoop2 2 : 2 : 1 
+			innerLoop2 3 : 2 : 1 
+		innerLoop1 3
+		
+			innerLoop2 1 : 3 : 1 
+			innerLoop2 2 : 3 : 1 
+			innerLoop2 3 : 3 : 1 	Loop 2
+	
+		innerLoop1 1
+		
+			innerLoop2 1 : 1 : 2 
+			innerLoop2 2 : 1 : 2 
+			innerLoop2 3 : 1 : 2 
+		innerLoop1 2
+		
+			innerLoop2 1 : 2 : 2 
+			innerLoop2 2 : 2 : 2 
+			innerLoop2 3 : 2 : 2 
+		innerLoop1 3
+		
+			innerLoop2 1 : 3 : 2 
+			innerLoop2 2 : 3 : 2 
+			innerLoop2 3 : 3 : 2 	Loop 3
+	
+		innerLoop1 1
+		
+			innerLoop2 1 : 1 : 3 
+			innerLoop2 2 : 1 : 3 
+			innerLoop2 3 : 1 : 3 
+		innerLoop1 2
+		
+			innerLoop2 1 : 2 : 3 
+			innerLoop2 2 : 2 : 3 
+			innerLoop2 3 : 2 : 3 
+		innerLoop1 3
+		
+			innerLoop2 1 : 3 : 3 
+			innerLoop2 2 : 3 : 3 
+			innerLoop2 3 : 3 : 3 	Loop 4
+	
+		innerLoop1 1
+		
+			innerLoop2 1 : 1 : 4 
+			innerLoop2 2 : 1 : 4 
+			innerLoop2 3 : 1 : 4 
+		innerLoop1 2
+		
+			innerLoop2 1 : 2 : 4 
+			innerLoop2 2 : 2 : 4 
+			innerLoop2 3 : 2 : 4 
+		innerLoop1 3
+		
+			innerLoop2 1 : 3 : 4 
+			innerLoop2 2 : 3 : 4 
+			innerLoop2 3 : 3 : 4 

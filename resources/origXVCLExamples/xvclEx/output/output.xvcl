@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="output" outdir="C:\xvclEx\output\output" outfile="output.java">
+	<set var="outdir" value="b"/>
+	<set var="outfile" value="b"/>
+		I am from master frame "output".
+	<set var="dir" value="C:\xvclEx\output"/>
+	<adapt x-frame="?@dir?\a\a.xvcl"/>
+	<adapt x-frame="?@dir?\b\b.xvcl" outdir="?@outdir?" outfile="?@outfile?"/>
+</x-frame>

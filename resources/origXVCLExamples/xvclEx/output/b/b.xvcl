@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="b">
+			This is x-frame "b" being copied by frame "output".
+</x-frame>

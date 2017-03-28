@@ -1,0 +1,46 @@
+#set TOOLBAR = "toolbar"
+#set ToolbarBtns = "New","Open","Save","-","Exit"
+
+#break TOOLBAR_NEWPARAMETERS
+
+	private JToolBar ?@TOOLBAR? = (JToolBar)createToolbar();
+
+	/**
+	 * Create a Java toolbar. 
+	 */
+	private Component createToolbar() {
+		JToolBar toolbar = new JToolBar();
+		JButton  button; 
+	#while ToolbarBtns
+		#select ToolbarBtns
+			#option "-"
+			toolbar.add(Box.createHorizontalStrut(5));
+			#endoption
+			#otherwise
+			button = new JButton(new ImageIcon(\"?@Gif@ToolbarBtns?\"));    
+			button.setToolTipText(\"?@Tip@ToolbarBtns?\");
+			button.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+				?@Action@ToolbarBtns?();
+				}
+				});
+				toolbar.add(button);	
+			#endotherwise
+		#endselect
+	#endwhile
+
+		toolbar.add(Box.createHorizontalGlue());
+		return toolbar;
+	}
+
+#break: TOOLBAR_ACTIONS
+#while ToolbarBtns
+	#select ToolbarBtns
+		#option "-"
+		#endoption
+		#otherwise
+		#adapt ?@Action@ToolbarBtns?
+		#endotherwise
+	#endselect
+#endwhile
+#endbreak

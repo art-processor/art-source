@@ -1,0 +1,25 @@
+#while multi1, multi2
+	#select multi2
+		#option "a"
+			#break: ?@multi1?
+
+			replace this text
+
+			#endbreak
+		#endoption
+		#option "b"
+			#break: ?@multi1?
+
+			replace this text
+
+			#endbreak
+		#endoption
+		#option "c"
+			#break: ?@multi1?
+			
+			replace this text
+			
+			#endbreak
+		#endoption
+	#endselect
+#endwhile

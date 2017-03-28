@@ -1,0 +1,8 @@
+
+My name is Mr.Soe
+
+
+	//me become undefined
+		you are Mr.Honghyu
+		Mr.Honghyu don't exist here.
+	// as me become undefined, this adapt will introduce variable undefined error if not commented

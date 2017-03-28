@@ -1,0 +1,14 @@
+BEGINNING OF FILE: D:\work\vclang-code\resources\scopeMiddleLayer\aaa.txt: 20 [1, 1, 1]
+BEGINNING OF FILE: D:\work\vclang-code\resources\scopeMiddleLayer\bbb.txt: 20 100
+END OF FILE: D:\work\vclang-code\resources\scopeMiddleLayer\bbb.txt: 20 100
+BEGINNING OF FILE: D:\work\vclang-code\resources\scopeMiddleLayer\bbb.txt: 20 10000000000
+END OF FILE: D:\work\vclang-code\resources\scopeMiddleLayer\bbb.txt: 20 10000000000
+END OF FILE: D:\work\vclang-code\resources\scopeMiddleLayer\aaa.txt: 20 10000 [1, 1, 1]
+[1, 2, 3]
+BEGINNING OF FILE: D:\work\vclang-code\resources\scopeMiddleLayer\aaa.txt: 3000 [1, 2, 3]
+BEGINNING OF FILE: D:\work\vclang-code\resources\scopeMiddleLayer\bbb.txt: 3000 100
+END OF FILE: D:\work\vclang-code\resources\scopeMiddleLayer\bbb.txt: 3000 100
+BEGINNING OF FILE: D:\work\vclang-code\resources\scopeMiddleLayer\bbb.txt: 3000 10000000000
+END OF FILE: D:\work\vclang-code\resources\scopeMiddleLayer\bbb.txt: 3000 10000000000
+END OF FILE: D:\work\vclang-code\resources\scopeMiddleLayer\aaa.txt: 3000 10000 [1, 2, 3]
+END OF FILE D:\work\vclang-code\resources\scopeMiddleLayer\scopeMiddleLayer: 10 [1, 2, 3]

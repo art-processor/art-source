@@ -1,0 +1,56 @@
+
+    public ?@elmtType?Buffer slice() {
+	int pos = this.position();
+	int lim = this.limit();
+	assert (pos <= lim);
+	int rem = (pos <= lim ? lim - pos : 0);
+	int off = (pos << ?@elmtSize?);
+	return new Direct?@elmtType?BufferR?@ByteOrder?(this, -1, 0, rem, rem, off);
+    }
+
+    public ?@elmtType?Buffer duplicate() {
+	return new Direct?@elmtType?BufferR?@ByteOrder?(this,
+					      this.markValue(),
+					      this.position(),
+					      this.limit(),
+					      this.capacity(),
+					      0);
+    }
+
+    public ?@elmtType?Buffer asReadOnlyBuffer() {
+
+	return duplicate();
+
+    }
+
+    public ?@elmtType?Buffer put(byte x) {
+
+	throw new ReadOnlyBufferException();
+
+    }
+
+    public ?@elmtType?Buffer put(int i, byte x) {
+
+	throw new ReadOnlyBufferException();
+
+    }
+
+    public ?@elmtType?Buffer put(?@elmtType?Buffer src) {
+
+	throw new ReadOnlyBufferException();
+
+    }
+
+    public ?@elmtType?Buffer compact() {
+
+	throw new ReadOnlyBufferException();
+
+    }
+
+    public boolean isDirect() {
+	return true;
+    }
+
+    public boolean isReadOnly() {
+	return true;
+    }

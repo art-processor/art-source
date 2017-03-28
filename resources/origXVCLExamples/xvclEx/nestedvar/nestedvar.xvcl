@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="nestedVar" outdir="nestedDir" outfile="variable" language="java">
+	
+	
+	<set var="BYBU" value="G"/>
+	<set var="BG" value="H"/>	
+	<set var="R" value="B?@@A?B?@C?" defer-evaluation="yes"/>
+
+	<set var="A" value="X"/>
+	<set var="X" value="Y"/>
+	<set var="Y" value="Z"/>
+	<set var="C" value="U"/>
+	<set var="BU" value="V"/>
+	<set var="AV" value="W"/>
+	<set var="AT" value="S"/>
+	<set var="V" value="T"/>
+
+	
+
+	<set var="E" value="?@F?" defer-evaluation="yes"/>
+	<set var="F" value="?@G?" defer-evaluation="yes"/>
+	<set var="G" value="L"/>
+
+	<adapt x-frame="a.xvcl"/>
+</x-frame>

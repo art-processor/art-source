@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="a" language="java">
+	<while using-items-in="multi1, multi2">
+		<select option="multi2">
+			<option value="a">
+			   <break name="?@multi1?">
+
+			     replace this text
+
+			   </break>
+			</option>
+			<option value="b">
+			   <break name="?@multi1?">
+
+			     replace this text
+
+			   </break>
+			</option>
+			<option value="c">
+			   <break name="?@multi1?">
+
+			     replace this text
+
+			   </break>
+			</option>
+		</select>
+	</while>
+</x-frame>

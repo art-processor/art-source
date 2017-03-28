@@ -1,0 +1,52 @@
+
+    DirectByteBuffer(int cap) {			// package-private
+
+	super(-1, 0, cap, cap, false);
+	int ps = Bits.pageSize();
+	long a = unsafe.allocateMemory(cap + ps);
+	unsafe.setMemory(a, cap + ps, (byte) 0);
+        if ((a % ps) != 0) {
+            // Create allocated temporary buffer pointing at beginning of
+            // storage for proper cleanup
+            DirectByteBuffer tmpBuf =
+                new DirectByteBuffer(a, cap + ps, true, false);
+            address = a + ps - (a % ps);
+            allocated = false;
+            viewedBuffer = tmpBuf;
+        } else {
+            // Memory is already aligned; just use it
+            address = a;
+            allocated = true;
+        }
+
+    }
+
+    private DirectByteBuffer(long addr, int cap, boolean alloc, boolean mapped) {
+        super(-1, 0, cap, cap, mapped);
+        address = addr;
+        allocated = alloc;
+    }
+
+    // Invoked only by JNI: NewDirectByteBuffer(void*, long)
+    //
+    private DirectByteBuffer(long addr, int cap) {
+        this(addr, cap, false, false);
+    }
+
+    DirectByteBuffer(int cap,			// package-private
+			   long addr, int off,
+			   boolean mapped)
+    {
+
+        super(-1, 0, cap, cap, mapped);
+	int ps = Bits.pageSize();
+        DirectByteBuffer tmpBuf = null;
+        // address must be page aligned
+        assert ((addr % ps) == 0);
+        tmpBuf = new DirectByteBuffer(addr, cap + off, false, mapped);
+        allocated = false;
+        address = addr + off;
+        viewedBuffer = tmpBuf;
+
+    }
+

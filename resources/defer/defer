@@ -1,0 +1,7 @@
+#output "output"
+
+#set B = "C"
+#set C = 3
+
+#set-defer A = ?@X?
+#adapt "a"

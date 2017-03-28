@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl_1_0.dtd">
+<x-frame name="C:\xvclEx\insert\b.xvcl" language="java">
+	before break in B
+	<break name="break_a">
+		Mr. Small.
+	</break>
+	after break  in B
+
+	another break
+	<break name="break_a"/>
+	<break name="break_a"/>
+</x-frame>

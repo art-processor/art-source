@@ -1,0 +1,20 @@
+#output "output"
+
+#setloop aaa
+	#vars  
+		#var a = 1
+		#var 	 b 	
+		#var c = 234
+	#endvars 	  
+	#iter   a = 1 , b = 2
+	#iter   a = 14 , b = 2, c = 166  
+#endsetloop 
+
+#remove aaa.c
+#set aaa.c = 10,10
+
+#while aaa
+
+?@aaa.c?
+
+#endwhile

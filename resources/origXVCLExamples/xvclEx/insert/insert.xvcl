@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl_1_0.dtd">
+<x-frame name="insert" outdir="insertDir" outfile="myinsert.java" language="java">
+	<set var="dir" value="insert"/>
+	<adapt x-frame="C:\xvclEx\insert\a.xvcl">
+		<insert-before break="break_a">
+				This is before the break.
+			</insert-before>
+		<insert break="break_a">
+				This is a test of Mr.Soe inside break.
+			</insert>
+		<insert-after break="break_a">
+				This is after the break.
+			</insert-after>
+		<insert break="break_a">
+				continue from the previous insert
+			</insert>
+	</adapt>
+</x-frame>

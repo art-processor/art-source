@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="a" language="java">
+	
+value for ?@A@B@C? = <value-of expr="?@A@B@C?"/>
+value for ?@@A? = <value-of expr="?@@A?"/>
+value for ?@A@@B@C? = <value-of expr="?@A@@B@C?"/>
+value for B?@@A?B?@C?  = <value-of expr="B?@@A?B?@C?"/>
+value for ?@B@@R? = <value-of expr="?@B@@R?"/>
+value for ?@E? = <value-of expr="?@E?"/>
+</x-frame>

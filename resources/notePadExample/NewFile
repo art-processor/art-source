@@ -1,0 +1,11 @@
+#set Editor = "Editor"
+
+#break NEWFILE_NEWPARAMETERS
+
+	private void NewFile() {
+	#break: NEWFILE
+		Document oldDoc = ?@EDITOR?.getDocument();
+		?@EDITOR?.setDocument(new PlainDocument());
+		revalidate();
+	#endbreak
+	}

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="raise" outdir="raiseDir" outfile="variable" language="java">
+	<set var="dir" value="C:\xvclEx\raise\"/>
+	<set var="me" value="Soe"/>
+	<adapt x-frame="?@dir?b.xvcl" samelevel="yes"/>
+
+		My name is Mr.<value-of expr="?@me?"/>
+		you are Mr.<value-of expr="?@you?"/>
+		Mr.<value-of expr="?@you?"/> don't exist here.
+		<adapt x-frame="?@dir?a.xvcl"/>
+</x-frame>

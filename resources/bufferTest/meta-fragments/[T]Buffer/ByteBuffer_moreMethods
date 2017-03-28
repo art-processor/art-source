@@ -1,0 +1,238 @@
+
+    /**
+     * Allocates a new direct byte buffer.
+     *
+     *
+     * @return  The new byte buffer
+     */
+    public static ByteBuffer allocateDirect(int capacity) {
+        return new DirectByteBuffer(capacity);
+    }
+
+
+    // -- Other char stuff --
+
+
+    // -- Other byte stuff: Access to binary data --
+
+    boolean bigEndian					// package-private
+	= true;
+    boolean nativeByteOrder				// package-private
+	= (Bits.byteOrder() == ByteOrder.BIG_ENDIAN);
+
+    /**
+     * Retrieves this buffer's byte order.
+     *
+     */
+    public final ByteOrder order() {
+	return bigEndian \? ByteOrder.BIG_ENDIAN : ByteOrder.LITTLE_ENDIAN;
+    }
+
+    /**
+     * Modifies this buffer's byte order.  </p>
+     *
+     * @return  This buffer
+     */
+    public final ByteBuffer order(ByteOrder bo) {
+	bigEndian = (bo == ByteOrder.BIG_ENDIAN);
+	nativeByteOrder =
+	    (bigEndian == (Bits.byteOrder() == ByteOrder.BIG_ENDIAN));
+	return this;
+    }
+
+    // Unchecked accessors, for use by ByteBufferAs-X-Buffer classes
+    //
+    abstract byte _get(int i);				// package-private
+    abstract void _put(int i, byte b);			// package-private
+
+    /**
+     * Relative <i>get</i> method for reading a char value.
+     *
+     */
+    public abstract char getChar();
+
+    /**
+     * Relative <i>put</i> method for writing a char
+     * value&nbsp;&nbsp;<i>(optional operation)</i>.
+     *
+     */
+    public abstract ByteBuffer putChar(char value);
+
+    /**
+     * Absolute <i>get</i> method for reading a char value.
+     *
+     */
+    public abstract char getChar(int index);
+
+    /**
+     * Absolute <i>put</i> method for writing a char
+     * value&nbsp;&nbsp;<i>(optional operation)</i>.
+     *
+     */
+    public abstract ByteBuffer putChar(int index, char value);
+
+    /**
+     * Creates a view of this byte buffer as a char buffer.
+     * @return  A new char buffer
+     */
+    public abstract CharBuffer asCharBuffer();
+
+    /**
+     * Relative <i>get</i> method for reading a short value.
+     *
+     */
+    public abstract short getShort();
+
+    /**
+     * Relative <i>put</i> method for writing a short
+     * value&nbsp;&nbsp;<i>(optional operation)</i>.
+     *
+     */
+    public abstract ByteBuffer putShort(short value);
+
+    /**
+     * Absolute <i>get</i> method for reading a short value.
+     *
+     */
+    public abstract short getShort(int index);
+
+    /**
+     * Absolute <i>put</i> method for writing a short
+     * value&nbsp;&nbsp;<i>(optional operation)</i>.
+     *
+     */
+    public abstract ByteBuffer putShort(int index, short value);
+
+    /**
+     * Creates a view of this byte buffer as a short buffer.
+     *
+     * @return  A new short buffer
+     */
+    public abstract ShortBuffer asShortBuffer();
+
+    /**
+     * Relative <i>get</i> method for reading an int value.
+     *
+     */
+    public abstract int getInt();
+
+    /**
+     * Relative <i>put</i> method for writing an int
+     * value&nbsp;&nbsp;<i>(optional operation)</i>.
+     *
+     */
+    public abstract ByteBuffer putInt(int value);
+
+    /**
+     * Absolute <i>get</i> method for reading an int value.
+     *
+     */
+    public abstract int getInt(int index);
+
+    /**
+     * Absolute <i>put</i> method for writing an int
+     * value&nbsp;&nbsp;<i>(optional operation)</i>.
+     *
+     */
+    public abstract ByteBuffer putInt(int index, int value);
+
+    /**
+     * Creates a view of this byte buffer as an int buffer.
+     *
+     */
+    public abstract IntBuffer asIntBuffer();
+
+    /**
+     * Relative <i>get</i> method for reading a long value.
+     *
+     */
+    public abstract long getLong();
+
+    /**
+     * Relative <i>put</i> method for writing a long
+     * value&nbsp;&nbsp;<i>(optional operation)</i>.
+     *
+     */
+    public abstract ByteBuffer putLong(long value);
+
+    /**
+     * Absolute <i>get</i> method for reading a long value.
+     *
+     */
+    public abstract long getLong(int index);
+
+    /**
+     * Absolute <i>put</i> method for writing a long
+     * value&nbsp;&nbsp;<i>(optional operation)</i>.
+     */
+    public abstract ByteBuffer putLong(int index, long value);
+
+    /**
+     * Creates a view of this byte buffer as a long buffer.
+     *
+     * @return  A new long buffer
+     */
+    public abstract LongBuffer asLongBuffer();
+
+    /**
+     * Relative <i>get</i> method for reading a float value.
+     *
+     */
+    public abstract float getFloat();
+
+    /**
+     * Relative <i>put</i> method for writing a float
+     * value&nbsp;&nbsp;<i>(optional operation)</i>.
+     */
+    public abstract ByteBuffer putFloat(float value);
+
+    /**
+     * Absolute <i>get</i> method for reading a float value.
+     *
+     */
+    public abstract float getFloat(int index);
+
+    /**
+     * Absolute <i>put</i> method for writing a float
+     * value&nbsp;&nbsp;<i>(optional operation)</i>.
+     */
+    public abstract ByteBuffer putFloat(int index, float value);
+
+    /**
+     * Creates a view of this byte buffer as a float buffer.
+     *
+     */
+    public abstract FloatBuffer asFloatBuffer();
+
+    /**
+     * Relative <i>get</i> method for reading a double value.
+     *
+     */
+    public abstract double getDouble();
+
+    /**
+     * Relative <i>put</i> method for writing a double
+     * value&nbsp;&nbsp;<i>(optional operation)</i>.
+     *
+     */
+    public abstract ByteBuffer putDouble(double value);
+
+    /**
+     * Absolute <i>get</i> method for reading a double value.
+     *
+     */
+    public abstract double getDouble(int index);
+
+    /**
+     * Absolute <i>put</i> method for writing a double
+     * value&nbsp;&nbsp;<i>(optional operation)</i>.
+     *
+     */
+    public abstract ByteBuffer putDouble(int index, double value);
+
+    /**
+     * Creates a view of this byte buffer as a double buffer.
+     *
+     * @return  A new double buffer
+     */
+    public abstract DoubleBuffer asDoubleBuffer();

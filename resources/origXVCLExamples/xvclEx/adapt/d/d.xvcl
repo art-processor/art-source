@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl_1_0.dtd">
+<x-frame name="d">
+
+	I'm frame "d" being copied by frame "b". 
+
+</x-frame>

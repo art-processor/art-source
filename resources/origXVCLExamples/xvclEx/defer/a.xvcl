@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl_1_0.dtd">
+<x-frame name="a" language="java">
+	<set var="X" value="6 / 3"/>
+value for A is evaluated at the time of the use = <value-of expr=" ?@A?"/>
+	<set var="X" value="3-7"/>
+value for A is evaluated at the time of the use = <value-of expr=" ?@A?"/>
+	<set var="X" value="   2+(3/(6.6-5.6))*4"/>
+value for A is evaluated at the time of the use = <value-of expr=" ?@A?"/>
+	<set var="X" value="?@@B?+3"/>
+value for A is evaluated at the time of the use = <value-of expr=" ?@A?"/>
+</x-frame>

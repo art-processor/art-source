@@ -1,0 +1,6 @@
+#output "output"
+#adapt "aaa.txt"
+
+SPC
+$currentoutput
+SPC

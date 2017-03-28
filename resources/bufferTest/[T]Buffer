@@ -1,0 +1,36 @@
+#set java_nio_packageName = "java.nio"
+
+#set elmtType = "Byte","Char","Double","Float","Int","Long","Short"
+#set elmttype = "byte","char","double","float","int","long","short"
+#set elmtSize = 0,1,3,2,2,3,1
+
+#while elmtType, elmttype, elmtSize
+  
+	#adapt: "resources/bufferTest/meta-fragments/[T]Buffer/[T]Buffer"
+		#select elmtType
+			#option Byte
+				#insert-after moreMethods
+					#adapt "resources/bufferTest/meta-fragments/[T]Buffer/ByteBuffer_moreMethods"
+				#endinsert
+			#endoption
+			#option Char
+				#insert implements 
+				 , CharSequence
+				#endinsert
+				#insert toString
+				#endinsert
+				#insert-after moreMethods
+					#adapt "resources/bufferTest/meta-fragments/[T]Buffer/order"
+					#adapt "resources/bufferTest/meta-fragments/[T]Buffer/CharBuffer_moreMethods"
+				#endinsert
+			#endoption
+			#otherwise
+				#insert-after moreMethods
+					#adapt "resources/bufferTest/meta-fragments/[T]Buffer/order"
+				#endinsert
+			#endotherwise
+			
+		#endselect
+
+	#endadapt
+#endwhile

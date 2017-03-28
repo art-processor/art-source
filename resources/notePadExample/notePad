@@ -1,0 +1,103 @@
+#set EDITOR = "editor"
+#set TOOLBAR = "toolbar"
+#set STATUSBAR = "statusbar"
+#set MENUBAR = "menubar"
+
+#set TITLE = "Notepad"
+#set BGCOLOR = "gray"
+
+#break NOTEPAD_NEWPARAMETERS
+	
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import java.util.*;
+
+import javax.swing.text.*;
+import javax.swing.event.*;
+import javax.swing.*;
+
+#break NOTEPAD_NEWIMPORT
+
+class ?@NOTEPAD? extends JPanel {
+
+	Notepad() {
+		super();
+
+		String lfClassName;
+		#select LookAndFeel
+			#option "Metal"
+			lfClassName = \"javax.swing.plaf.metal.MetalLookAndFeel\";
+			#endoption
+			#option "Motif"
+			lfClassName = \"com.sun.java.swing.plaf.motif.MotifLookAndFeel\";
+			#endoption
+			#option "Metal"
+			lfClassName = \"com.sun.java.swing.plaf.windows.WindowsLookAndFeel\";
+			#endoption
+		#endselect
+
+		try {
+		  UIManager.setLookAndFeel(lfClassName);
+		} catch (Exception exc) {
+		  System.err.println(\"Could not load LookAndFeel: \" + lfClassName);
+		}
+
+		setBorder(BorderFactory.createEtchedBorder());
+		setLayout(new BorderLayout());
+	
+		JScrollPane scroller = new JScrollPane();
+		JViewport port = scroller.getViewport();
+		port.add(?@EDITOR?);
+
+		JPanel panel = new JPanel();
+		panel.setLayout(new BorderLayout());	
+		panel.add(\"North\", ?@TOOLBAR?);
+		panel.add(\"Center\", scroller);
+
+		add(\"Center\", panel);
+		add(\"North\", ?@MENUBAR?);
+		add(\"South\", ?@STATUSBAR?);
+		}
+
+		public static void main(String[] args) {
+			try {
+				JFrame frame = new JFrame();
+				frame.setTitle(\"?@TITLE?\");
+				frame.setBackground(Color.?@BGCOLOR?);
+
+		#break: NOTEPAD_FRAMESETTINGS
+			frame.getContentPane().setLayout(new BorderLayout());
+			frame.getContentPane().add(\"Center\", new Notepad());
+			frame.pack();
+			frame.setSize(500, 600);
+		#endbreak
+
+			frame.addWindowListener(new AppCloser());
+			frame.show();
+		} catch (Throwable t) {
+			System.out.println(\"Exception: \" + t);
+			t.printStackTrace();
+		}
+	}        
+
+	protected static final class AppCloser extends WindowAdapter {
+		public void windowClosing(WindowEvent e) {
+	  
+	#break: NOTEPAD_EXIT
+		System.exit(0);
+	#endbreak
+		}
+	}
+
+	#adapt "editor"
+	#adapt "menubar"
+	#adapt: "toolbar"
+		#insert TOOLBAR_ACTIONS
+		#endinsert
+	#endadapt
+	#adapt "statusBar"
+
+}
+
+#break NOTEPAD_NEWMETHODS

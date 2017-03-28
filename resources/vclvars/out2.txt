@@ -1,0 +1,3 @@
+Current output dir is: D:\work\vclang-code\resources\vclvars
+Current output is D:\work\vclang-code\resources\vclvars\out2.txt
+back to output

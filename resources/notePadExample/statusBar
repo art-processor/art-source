@@ -1,0 +1,31 @@
+#set STATUSBAR = "Statusbar"
+
+#break STATUSBAR_NEWPARAMETERS
+
+	private JComponent ?@STATUSBAR? = (JComponent)createStatusbar();   
+
+	/**
+	* Create a status bar
+	*/
+	protected JComponent createStatusbar() {
+		// need to do something reasonable here
+	StatusBar status = new StatusBar();
+	return status;
+	}
+
+	class StatusBar extends JComponent {
+
+	public StatusBar() {
+		super();
+	#break: STATUSBAR_INIT
+		setBorder(BorderFactory.createEtchedBorder());
+		setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+	#endbreak
+	}
+
+	public void paint(Graphics g) {
+	#break: STATUSBAR_PAINT
+		super.paint(g);
+	#endbreak
+	}
+	}

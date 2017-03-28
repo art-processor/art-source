@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="a" language="java">
+	<while using-items-in="loop">
+	Loop <value-of expr="?@loop?"/>:
+		<while using-items-in="inner1">
+			innerLoop1 <value-of expr="?@inner1?"/>:
+			<while using-items-in="inner2">
+
+				innerLoop2 <value-of expr="?@inner2?"/>:<value-of expr="?@inner1?"/>:<value-of expr="?@loop?"/>:
+					
+			
+			</while>
+		</while>
+	</while>
+</x-frame>

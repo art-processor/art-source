@@ -1,0 +1,21 @@
+debugmode is : false
+Default output is: D:\work\vclang-code\resources\vclvars\defaultOutput.txt
+Current file is: D:\work\vclang-code\resources\vclvars\vclvars
+Current output is D:\work\vclang-code\resources\vclvars\output
+Changing output to D:\work\vclang-code\resources\vclvars"\out2.txt"
+--
+Back at D:\work\vclang-code\resources\vclvars\output
+
+Number of variables: 5
+
+( first,
+
+    second,
+
+    third,
+
+    fourth,
+
+    fifth )
+
+    

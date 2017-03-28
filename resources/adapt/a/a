@@ -1,0 +1,3 @@
+This is frame \"a\" copied by frame \"adapt\"
+
+#adapt "../c/c"

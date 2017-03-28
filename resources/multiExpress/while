@@ -1,0 +1,8 @@
+#output "output"
+
+#set I = 1
+#set loop = I, ?I+I?, ?I+2?, ?I+3?
+#set inner1 = I, ?I+1?, ?I+2?
+#set inner2 = 1,2,3
+
+#adapt "a"

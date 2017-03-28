@@ -1,0 +1,5 @@
+#set A = "secondA"
+?@A?
+#remove B
+#set B = "secondB"
+?@B?

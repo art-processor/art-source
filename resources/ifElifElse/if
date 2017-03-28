@@ -1,0 +1,23 @@
+#output "output"
+
+#art.if (3 + 3  == 6)
+AAA
+	#art.if (1 == 4)
+	AINA
+	#art.elif (3 == 4)
+	BINA
+		#art.if 2 == 4
+		AINB
+		#art.elif (2+2 == 4)
+		BINB
+		#art.endif 
+	#art.else 
+		INNERELSE
+	#art.endif
+#art.elif (2 == 4)
+BBB1
+#art.elif (1 == 34)
+CCC
+#art.else
+ELSE
+#art.endif

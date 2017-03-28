@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl_1_0.dtd">
+<x-frame name="a" language="java">
+	<adapt x-frame="C:\xvclEx\insert\b.xvcl">
+		<insert break="break_a">  //this insert is overriden by the upper insert
+				I am inserting from lower level
+			</insert>
+	</adapt>
+		before break A
+		<break name="break_a">
+			Mr. Small.
+		</break>
+		after break A
+
+</x-frame>

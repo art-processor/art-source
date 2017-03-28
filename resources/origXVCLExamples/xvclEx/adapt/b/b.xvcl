@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl_1_0.dtd">
+<x-frame name="b">
+
+	This is x-frame "b" being copied by frame "adapt".
+	<adapt x-frame="C:\xvclEx\adapt\d\d.xvcl"/>
+</x-frame>

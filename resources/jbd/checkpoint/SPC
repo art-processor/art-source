@@ -1,0 +1,9 @@
+#set fileName = "jbd", "jbd2"
+#set spinWrite = "spin", "write"
+#set jbd2Prefix = "", "jbd2_"
+#set bhsPrefix = "", "journal->j_chkpt_"
+
+#while fileName, spinWrite, jbd2Prefix, bhsPrefix
+	#output "resources/jbd/checkpoint/output/"?@fileName?"_checkpoint.c_gen"
+	#adapt "resources/jbd/checkpoint/checkpoint.vcl"
+#endwhile

@@ -1,0 +1,31 @@
+#output "resources/escape/output"
+%asdasd
+\%aaa
+aa \% aa
+bb \? bb
+cc \ cc
+
+#set a = 4,4,5 % asd asd 
+
+%aaa
+%bbb
+%>AAA<%
+
+%asd %asd
+
+#vcl.if 1 == 1
+
+#while a
+%> %fgjf j 
+AA
+AA
+<% 
+
+Q
+a
+%ASE
+%AD
+a
+#endwhile
+
+#vcl.endif

@@ -1,0 +1,45 @@
+#set EDITOR = "Editor"
+
+#break OPENFILE_NEWPARAMETERS
+
+#adapt "FileLoader"
+
+	private FileDialog fileDialog;
+
+	private void OpenFile() {
+
+#break: OPENFILE_OPENFILE
+	    Frame frame = getFrame();
+	    if (fileDialog == null) {
+		fileDialog = new FileDialog(frame);
+	    }
+	    fileDialog.setMode(FileDialog.LOAD);
+	    fileDialog.show();
+
+	    String file = fileDialog.getFile();
+	    if (file == null) {
+		return;
+	    }
+	    String directory = fileDialog.getDirectory();
+	    File f = new File(directory, file);
+	    if (f.exists()) {
+		Document oldDoc = ?@EDITOR?.getDocument();
+		?@EDITOR?.setDocument(new PlainDocument());
+		frame.setTitle(file);
+		Thread loader = new FileLoader(f, ?@EDITOR?.getDocument());
+		loader.start();
+	    }
+#endbreak
+	}
+
+    /**
+     * Find the hosting frame, for the file-chooser dialog.
+     */
+    protected Frame getFrame() {
+	for (Container p = getParent(); p != null; p = p.getParent()) {
+	    if (p instanceof Frame) {
+		return (Frame) p;
+	    }
+	}
+	return null;
+    }

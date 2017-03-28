@@ -1,0 +1,4 @@
+BEGINNING OF FILE: ?$currentfile?: ?@a? ?@b?
+#set a = 60
+#set b = 200
+END OF FILE: ?$currentfile?: ?@a? ?@b?

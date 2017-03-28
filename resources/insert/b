@@ -1,0 +1,9 @@
+before break in B
+#break: break_a
+	Mr. Small.
+#endbreak
+after break in B
+
+another break
+#break break_a
+#break break_a

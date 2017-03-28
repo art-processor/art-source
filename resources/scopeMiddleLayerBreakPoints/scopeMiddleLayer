@@ -1,0 +1,20 @@
+#output "output"
+--------- file: ?$currentfile?
+#break break1
+
+#adapt: "aaa.txt"
+
+#endadapt
+
+file: ?$currentfile?
+#break break1
+
+#adapt: "aaa.txt"
+#insert break1
+ZZZZZZZZ
+#endinsert
+#endadapt
+
+file: ?$currentfile?
+#break break1
+--------- endfile: ?$currentfile?

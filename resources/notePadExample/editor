@@ -1,0 +1,17 @@
+#set EDITOR = "editor"
+
+#break EDITOR_NEWPARAMETERS
+
+	private JTextComponent ?@EDITOR? = createEditor();
+
+
+	/**
+	 * Create an editor to represent the given document.  
+	 */
+	protected JTextComponent createEditor() {
+#break: EDITOR_CREATING
+		JTextComponent editor = new JTextArea();
+		editor.setFont(new Font(\"monospaced\", Font.PLAIN, 12));
+#endbreak
+	return editor;
+	}

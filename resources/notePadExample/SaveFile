@@ -1,0 +1,12 @@
+#break SAVEFILE_NEWPARAMETERS
+
+	private void SaveFile() {
+	#break: SAVEFILE
+		JOptionPane.showMessageDialog(this, \"This functionality is left for readers to implement\", 
+		\"Save\", JOptionPane.INFORMATION_MESSAGE);
+          
+		#set SAVED = "TRUE"
+
+		return;
+	#endbreak
+	}

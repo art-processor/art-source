@@ -1,0 +1,4 @@
+#output "output"
+#set task = "task"
+
+?$ulcap(task)? ?$llcap(task)? = new ?$ulcap(task)?();

@@ -1,0 +1,7 @@
+#output "output"
+
+#text
+This goes to the output
+#set a = 34 to the output
+?@aaa? ?2+2+2? unprocessed
+#endtext

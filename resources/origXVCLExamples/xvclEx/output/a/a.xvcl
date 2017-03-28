@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="a" outdir="a" outfile="a" language="java">
+			This is frame "a" copied by frame "output".
+			<adapt x-frame="?@dir?\c\c.xvcl" outdir="c" outfile="c"/>
+</x-frame>

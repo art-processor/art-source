@@ -1,0 +1,38 @@
+#output bufferTest/outFiles/Heap?@elmtType?BufferR.java
+
+/*
+ * @\(#)Heap-X-Buffer.java	1.24 01/12/03
+ *
+ * Copyright 2002 Sun Microsystems, Inc. All rights reserved.
+ * SUN PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+ */
+
+// -- This file was mechanically generated: Do not edit! -- //
+
+package ?@java_nio_packageName?;
+
+/**
+
+ * A read-only HeapByteBuffer.  This class extends the corresponding
+ * read/write class, overriding the mutation methods to throw a {@\link
+ * ReadOnlyBufferException} and overriding the view-buffer methods to return an
+ * instance of this class rather than of the superclass.
+
+ */
+
+class Heap?@elmtType?BufferR
+    extends Heap?@elmtType?Buffer
+{
+
+    // For speed these fields are actually declared in X-Buffer;
+    // these declarations are here as documentation
+    /*
+
+    */
+
+#adapt bufferTest/meta-fragments/Heap[T]BufferR/commonConstructors
+#adapt bufferTest/meta-fragments/Heap[T]BufferR/commonMethods
+#break moreMethods
+#endbreak
+
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="while" outdir="whileDir" outfile="while" language="java">
+	<set-multi var="loop" value="1,2,3,4,5"/>
+	<set-multi var="inner1" value="1,2,3,4"/>
+	<set-multi var="inner2" value="1,2,3"/>
+	<adapt x-frame="a.xvcl"/>
+</x-frame>

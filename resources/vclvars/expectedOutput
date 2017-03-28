@@ -1,0 +1,21 @@
+debugmode is : false
+Default output is: C:\Users\Dan\Dropbox\VCLWithAnalyzer\vclang-code\resources\vclvars\defaultOutput.txt
+Current file is: C:\Users\Dan\Dropbox\VCLWithAnalyzer\vclang-code\resources\vclvars\vclvars
+Current output is C:\Users\Dan\Dropbox\VCLWithAnalyzer\vclang-code\resources\vclvars\output
+Changing output to C:\Users\Dan\Dropbox\VCLWithAnalyzer\vclang-code\resources\vclvars"\out2.txt"
+--
+Back at C:\Users\Dan\Dropbox\VCLWithAnalyzer\vclang-code\resources\vclvars\output
+
+Number of variables: 5
+
+( first,
+
+    second,
+
+    third,
+
+    fourth,
+
+    fifth )
+
+    

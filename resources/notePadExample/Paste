@@ -1,0 +1,5 @@
+#set EDITOR = "Editor"
+
+        private void Paste() {
+	   ?@EDITOR?.paste();
+	 }

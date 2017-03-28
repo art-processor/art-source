@@ -1,0 +1,15 @@
+--------- file: ?$currentfile?
+#break break1
+
+#adapt: "bbb.txt"
+#insert break1
+CCCCCCCC
+#endinsert
+#endadapt
+
+#insert break1
+DDDDDDDD
+#endinsert
+
+#break break1
+--------- endfile: ?$currentfile?

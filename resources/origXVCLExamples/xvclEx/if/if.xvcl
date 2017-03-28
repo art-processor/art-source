@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE x-frame SYSTEM "file:///c:\xvcl\dtd\xvcl.dtd">
+<x-frame name="if" >
+
+<set var="J2SE" value="yes"/>
+
+	    <ifdef var="J2SE">
+              <adapt x-frame="SwingGUI.xvcl" outfile="J2SEGuide.java"/>
+	    </ifdef>
+
+	    <ifndef var="J2SE">
+	      <adapt x-frame="TUI.xvcl" outfile="J2MEGuide.java"/>
+	    </ifndef>
+
+</x-frame>

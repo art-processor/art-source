@@ -1,0 +1,106 @@
+Loop: 1
+	
+		innerLoop1: 1:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 2:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 3:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 4:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:Loop: 2
+	
+		innerLoop1: 1:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 2:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 3:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 4:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:Loop: 3
+	
+		innerLoop1: 1:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 2:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 3:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 4:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:Loop: 4
+	
+		innerLoop1: 1:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 2:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 3:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 4:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:Loop: 5
+	
+		innerLoop1: 1:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 2:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 3:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:
+		innerLoop1: 4:
+		
+			innerLoop2: 1:
+			innerLoop2: 2:
+			innerLoop2: 3:

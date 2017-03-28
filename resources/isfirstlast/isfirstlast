@@ -1,0 +1,18 @@
+#output "output"
+#set variables = "first", "second", "third", "fourth", "fifth"
+
+Number of variables: ?$size(variables)?
+
+#while variables
+	#art.if $isfirst(variables)
+( ?@variables?,
+
+	#art.endif
+	#art.if ($islast(variables) == false && $isfirst(variables) == false)
+?@variables?,
+
+	#art.elif ($islast(variables))
+?@variables? )
+
+	#art.endif
+#endwhile

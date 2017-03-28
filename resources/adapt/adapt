@@ -1,0 +1,5 @@
+#output "output"
+This x-frame adapt It copies x-frame a and b
+
+#adapt "a/a"
+#adapt "b/b"
