@@ -38,11 +38,13 @@ We have a pre-configured ecplipse with Antlr 3.2 and Antlr eclipse workbench whi
       - Under "Output Folder" select "Project relative folder" and type: "antlr-generated",
       - Under Java, tick "Append Java package to output folder".
       - Apply. Ok.
-      ![alt text](http://art-processor.org/img/docimg/antlr-setting.png "Antlr Settings")
+      
+      ![Antlr Settings](https://raw.githubusercontent.com/art-processor/art-processor.github.io/master/img/docimg/antlr-setting.PNG "Antlr Settings")
   - Now, once there is a change in any of the (*.g) files and the change is saved, we can see the Antlr compiler's result on the console window and the affected files in the `antlr-generated` package have been replaced with the newly generated java files from the grammar definition.
   - JRE 1.8 will cause an error to pop up, however the parser/lexer code generation is successful. The error can be ignored, or you can run with JRE 1.7, in that case a NPE error will be reported on the Console view.
      - Changing JRE in Eclipse [optional]: Top menu -> Window -> Preferemces -> Java -> Installed JREs -> Add and select 1.7 from your computer
-     ![alt text](http://art-processor.org/img/docimg/jre-setting.png "JRE Settings")
+     
+     ![JRE Settings](https://raw.githubusercontent.com/art-processor/art-processor.github.io/master/img/docimg/jre-setting.PNG "JRE Settings")
      - More about the JRE 1.8 <-> Antlr 3.2 incompatibility issue [here](http://stackoverflow.com/questions/22366415/antlr-plugin-in-eclipse#22367682)
   - Happy coding!
   
