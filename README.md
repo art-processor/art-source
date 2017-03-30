@@ -9,6 +9,9 @@ ART can be also pictured as an advanced template system, where any program struc
 For more information on ART visit the ART website: [art-processor.org](http://art-processor.org "ART Website").
 
 # ART Source
+
+[![Latest release](https://img.shields.io/github/release/art-processor/art-source.svg)](https://github.com/art-processor/art-source/releases/latest)
+
 This repository will contain the source code of ART processor code and grammar definition
 
 ART processor's core code is built in Java, using a parser/lexer generator tool Antlr. The Antlr version used is 3.2. We were using the feature to define grammars to output AST trees and using tree-rewriting. The new Antlr4 has no tree-rewriting and suggest that logic to be moved in the grammar logic's source code instead of grammar syntax definition, so the syntax and code has to be migrated to use the new Antlr version. Help and suggestions on migration are welcome.
