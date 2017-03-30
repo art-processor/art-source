@@ -11,6 +11,7 @@ For more information on ART visit the ART website: [art-processor.org](http://ar
 # ART Source
 
 [![Latest release](https://img.shields.io/github/release/art-processor/art-source.svg)](https://github.com/art-processor/art-source/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 This repository will contain the source code of ART processor code and grammar definition
 
