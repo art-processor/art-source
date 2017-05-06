@@ -1,5 +1,7 @@
 # ART - Adaptive Reuse Technique
 
+(This project was previously residing at: https://sourceforge.net/projects/vclang)
+
 ART is a notation to represent families of similar programs as highly parameterized, adaptable templates, for ease of **maintenance** and **reuse**. Typically, a program family comprises program versions that evolved from a single original program as new requirements have been implemented to it over time. Each program version addresses a specific customer segment or platform. Such program versions have much in common, but differ in some user requirements or design/implementation details.
 
 ART provides an end-to-end solution for managing program families that eliminates the need for other mechanisms that are often used for that purpose such as macros or design patterns, and significantly reduces the scope in which we apply configuration management systems.
